@@ -11,6 +11,7 @@ public class Planetarium
 			System.out.println(q);
 			
 			System.out.println("Change again");
+			System.out.println("test3");
 			
 			
 			
