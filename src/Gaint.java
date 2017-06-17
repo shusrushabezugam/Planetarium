@@ -1,18 +1,36 @@
 
 public class Gaint extends Star 
-{
-	public String commonName;
+{	
+	
+	
+	protected String constellationDesignation="Alpha Bootis";
+	public enum Gaintness{supergaint,gaint,subgaint}; 
 
 	@Override
 	public String getCelestialClassification() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return "Gaint Star";
 	}
 
 	@Override
-	public String getFactualSummary() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getFactualSummary() 
+	{
+	
+		
+		
+		return super.getFactualSummary()+"constellationDesignation"+constellationDesignation+"\nSpectral Type = "+Star.SpectralType.G;	
 	}
+
+
+	public Gaint(String commonName, SpectralType type, double apparentMagnitude, double absoluteMagnitude,
+			double distanceFromTheSun, String[] planets,Gaintness g) {
+		super(commonName, type, apparentMagnitude, absoluteMagnitude, distanceFromTheSun, planets);
+		// TODO Auto-generated constructor stub
+		
+	}
+
+	
+
+	
 
 }

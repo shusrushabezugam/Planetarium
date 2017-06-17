@@ -1,17 +1,27 @@
 
 public class GasGaint extends Planet
 {
-	public String commonName;
+	public boolean hasCloudBelts;
+	
+
+
 	@Override
 	public String getFactualSummary() {
 		// TODO Auto-generated method stub
-		return null;
+		return super.getFactualSummary()+"Has Cloud Belts = "+hasCloudBelts;
 	}
 
 	@Override
-	public String getCelestialClassification() {
+	public String getCelestialClassification()
+	{
 		// TODO Auto-generated method stub
-		return null;
+		return "Gas Gaint Planet";
+	}
+	public GasGaint(String commonName, double distanceFromTheSun, double siderealDay,double orbitalPeriod, boolean hasRings,
+			int numberOfStatilites, String[] nameThreeBigSatellites,boolean hasCloudBelts)
+	{
+		super(commonName,distanceFromTheSun,siderealDay, orbitalPeriod, hasRings, numberOfStatilites, nameThreeBigSatellites);
+		this.hasCloudBelts = hasCloudBelts;
 	}
 
 }
