@@ -162,6 +162,7 @@ public class Planetarium
 			SolarMass sandsm1=sandsm.toSolarMass1();
 			SuperNova Sanduleak=new SuperNova("Sanduleak - 69 - 202","Supernova 1987A", Star.SpectralType.B,2.9,-15.6,san2,sn,"20/05/1987",sandsm1,SuperNova.SuperNovaType.II);
 			
+			
 			CelestialVisitors hc=new CelestialVisitors("Halley's Commet", true, "01/01/1986", "01/01/2061");
 			
 			CelestialVisitors gem=new CelestialVisitors("Geminids", true, "12/13/2016", "12/13/2017");
