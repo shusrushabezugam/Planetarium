@@ -6,29 +6,29 @@ public class TerrestrialPlanets extends Planet
 	
 	@Override
 	public String getFactualSummary() {
-		return super.getFactualSummary()+"Has Ice Caps = "+hasIceCaps;
+		String a = getCelestialClassification();
+		return a ;
 	}
 
 	@Override
 	public String getCelestialClassification() {
 		// TODO Auto-generated method stub
-		
-		return "Terrestrial Planet";
-		
-	}
-	
-	
-	public TerrestrialPlanets(String commonName,AU distanceFromTheSun2,EarthDay siderealDay, EarthDay orbitalPeriod, boolean hasRings,
-			int numberOfStatilites, String[] nameThreeBigSatellites, boolean hasIceCaps,EarthMass relativeMassinem,MicroSun relativeMassinms) {
-	
-		super(commonName,distanceFromTheSun2,siderealDay, orbitalPeriod, hasRings, numberOfStatilites, nameThreeBigSatellites,relativeMassinem, relativeMassinms);
-		
-		this.hasIceCaps = hasIceCaps;
+		String[] name = {"Venus","Earth","Mars","Jupiter"};
+		String classification = "Terrestrial Planets";
+		String[] distance = {"0.39 AU", "0.72 AU", "1.0 AU", "1.524 AU"};
+		Double[] sidereal = {58.65, 243.1 ,1.0, 1.026};
+		Double[] orbital = {87.97, 224.7, 365.256, 687.0};
+		boolean[] rings = {false,false,false,false};
+		int[] satellites = {0,0,1,2};
+		String[] largestSatellites = {};
+		boolean iceCaps[] = {false,false,false,false};
+		return "Terrestrial";
 		
 	}
-
 	
-	
-	
+	public TerrestrialPlanets()
+	{
+		super();
+	}
 
 }
