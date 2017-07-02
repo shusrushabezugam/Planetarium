@@ -11,6 +11,7 @@ public class AU
 		AU auObj = new AU(au);
 		return auObj;
 	}
+	
 	public static String getAstroUnit()
 	{
 		return "AU";
