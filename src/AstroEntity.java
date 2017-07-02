@@ -2,24 +2,30 @@
 public abstract class AstroEntity 
 {
 public String commonName;
-protected abstract String getCelestialClassification();
+public abstract String getCelestialClassification();
+
+
 
 public AstroEntity() {
 }
 
-public AstroEntity(String commonName) {
 
+
+public String getCommonName() {
+	return commonName;
+}
+
+
+
+public void setCommonName(String commonName) {
 	this.commonName = commonName;
 }
- 
 
 public String getFactualSummary()
 {
-	return "Name = "+commonName;
+	return "helloFromAs";
 	
 }
-
-
 }
 
 

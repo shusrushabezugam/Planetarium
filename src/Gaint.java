@@ -1,15 +1,16 @@
 
-public class GasGaint extends Planet
+public class Gaint extends Star 
 {
 	public String commonName;
+
 	@Override
-	public String getFactualSummary() {
+	public String getCelestialClassification() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public String getCelestialClassification() {
+	public String getFactualSummary() {
 		// TODO Auto-generated method stub
 		return null;
 	}
