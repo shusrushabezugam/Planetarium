@@ -18,14 +18,16 @@ public class TerrestrialPlanets extends Planet
 	}
 	
 	
-	public TerrestrialPlanets(String commonName,double siderealDay, double distanceFromTheSun, double orbitalPeriod, boolean hasRings,
-			int numberOfStatilites, String[] nameThreeBigSatellites, boolean hasIceCaps) {
+	public TerrestrialPlanets(String commonName,AU distanceFromTheSun2,EarthDay siderealDay, EarthDay orbitalPeriod, boolean hasRings,
+			int numberOfStatilites, String[] nameThreeBigSatellites, boolean hasIceCaps,EarthMass relativeMassinem,MicroSun relativeMassinms) {
 	
-		super(commonName, siderealDay, distanceFromTheSun, orbitalPeriod,  hasRings, numberOfStatilites, nameThreeBigSatellites);
+		super(commonName,distanceFromTheSun2,siderealDay, orbitalPeriod, hasRings, numberOfStatilites, nameThreeBigSatellites,relativeMassinem, relativeMassinms);
 		
 		this.hasIceCaps = hasIceCaps;
 		
 	}
+
+	
 	
 	
 

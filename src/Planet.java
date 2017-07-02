@@ -3,43 +3,51 @@ public abstract class Planet extends AstroEntity
 {
 
 
-public double distanceFromTheSun ;
-protected double siderealDay;
-protected double orbitalPeriod;
+public AU distanceFromTheSun ;
+protected EarthDay siderealDay;
+protected EarthDay orbitalPeriod;
 protected boolean hasRings;
 protected int numberOfStatilites;
 public String[] nameThreeBigSatellites;
+public EarthMass relativeMassinem;
+public MicroSun relativeMassinms;
+
 
 public  String getFactualSummary()
 {
-	String name = "Name = "+commonName; 
+	String name = super.getFactualSummary(); 
 	String celestialClassification=getCelestialClassification();
 	String cc1 = "celestialClassification = "+celestialClassification;
-	String dFS = "Distance from Sun = "+distanceFromTheSun+" AU";
-	String sd="siderealDay = "+siderealDay;
-	String op="orbitalPeriod = "+orbitalPeriod;
-	String ntbs="largest Satillites"+getLargestSatillites();
-	String p = "\n"+name +"\n"+cc1+"\n"+dFS+"\n"+sd+"\n"+op+"\n"+ntbs+"\n";
+	String dFS = "Distance from Sun = "+distanceFromTheSun.au+" "+AU.getAstroUnit();
+	String sd="siderealDay = "+siderealDay.ed +EarthDay.getEarthDay();
+	String op="orbitalPeriod = "+orbitalPeriod.ed;
+	String ntbs="largest Satellites"+getLargestSatellites();
+	String rm="Relative Mass = "+relativeMassinem.rem+" "+EarthMass.getEarthMass()+" = "+relativeMassinms.relativeMass+" "+MicroSun.getMicroSun();
+	String p = "\n"+name +"\n"+cc1+"\n"+dFS+"\n"+sd+"\n"+op+"\n"+ntbs+"\n"+rm+"\n";
 	
 	return  p;	
 }
 
-public Planet(String commonName, double distanceFromTheSun,double siderealDay, double orbitalPeriod, boolean hasRings, int numberOfStatilites,
-		String[] nameThreeBigSatellites) {
+public Planet(String commonName,AU distanceFromTheSun2, EarthDay siderealDay, EarthDay orbitalPeriod, boolean hasRings, int numberOfStatilites,
+		String[] nameThreeBigSatellites,EarthMass relativeMassinem,MicroSun relativeMassinms) 
+{
 	
 	super(commonName);
 	
-	this.distanceFromTheSun = distanceFromTheSun;
+	this.distanceFromTheSun = distanceFromTheSun2;
 	this.siderealDay = siderealDay;
 	this.orbitalPeriod = orbitalPeriod;
 	this.hasRings =hasRings;
 	this.numberOfStatilites = numberOfStatilites;
 	this.nameThreeBigSatellites = nameThreeBigSatellites;
+	this.relativeMassinms=relativeMassinms;
+	this.relativeMassinem=relativeMassinem;
 	
 }
+
 public abstract String getCelestialClassification();
 
-protected String getLargestSatillites()
+protected String getLargestSatellites()
 {
 	
 	for(int i=0;i<nameThreeBigSatellites.length;i++)
@@ -52,6 +60,9 @@ protected String getLargestSatillites()
 String str = Arrays.toString(nameThreeBigSatellites);
 return str;
 }
+
+
+
 }
 
  

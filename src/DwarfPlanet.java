@@ -16,10 +16,10 @@ public class DwarfPlanet extends Planet
 		return "Dwarf Planet";	
 	}
 
-	public DwarfPlanet(String commonName,  double distanceFromTheSun,double siderealDay, double orbitalPeriod,boolean hasRings
-			,int numberOfStatilites,String[] nameThreeBigSatellites, boolean hasIrregularShape)
+	public DwarfPlanet(String commonName,AU distanceFromTheSun4,EarthDay siderealDay,EarthDay orbitalPeriod,boolean hasRings
+			,int numberOfStatilites,String[] nameThreeBigSatellites, boolean hasIrregularShape,EarthMass relativeMassinem,MicroSun relativeMassinms)
 	{
-		super(commonName,  distanceFromTheSun, siderealDay,orbitalPeriod, hasRings, numberOfStatilites,nameThreeBigSatellites);
+		super(commonName, distanceFromTheSun4, siderealDay,orbitalPeriod, hasRings, numberOfStatilites,nameThreeBigSatellites,relativeMassinem,relativeMassinms);
 		this.hasIrregularShape = hasIrregularShape;
 	}
 }

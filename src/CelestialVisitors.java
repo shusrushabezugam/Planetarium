@@ -25,7 +25,7 @@ public class CelestialVisitors extends AstroEntity implements CelestialVisitor
 	
 	public  String getFactualSummary()
 	{
-		//SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
+		
 		DateFormat d = new SimpleDateFormat("dd/MM/yyyy");
         
 		return "\n"+super.getFactualSummary()+ "\nCelestial Classification = " +getCelestialClassification()+"\nIs predictable = "+isPredictable()+"\nDate Last Appeared = "+d.format(lastAppearedOn())+"\nDate Next Appears = "+d.format(nextAppearsOn());
